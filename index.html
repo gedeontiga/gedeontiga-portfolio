@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vCard - Personal Portfolio</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/atg-logo.png"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="page-loader">
+      <div class="loader-content">
+        <div class="spinner">
+          <div class="spinner-ring"></div>
+          <div class="spinner-ring"></div>
+          <div class="spinner-ring"></div>
+        </div>
+        <div class="loader-text">Loading...</div>
+      </div>
+    </div>
+
+    <!-- Theme Toggle Floating Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <ion-icon name="moon" class="theme-icon active" id="moonIcon"></ion-icon>
+      <ion-icon name="sunny" class="theme-icon" id="sunIcon"></ion-icon>
+    </button>
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/profile-3.png"
+              alt="Richard hanrick"
+              width="100"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Richard hanrick">Ambomo Tiga Gédéon</h1>
+
+            <p class="title">Software engineer</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a
+                  href="mailto:gedeontigadev@gmail.com"
+                  class="contact-link email"
+                  >gedeontigadev@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="https://wa.me/1237691657998" class="contact-link"
+                  >+237 691-65-79-98</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>Yaounde, Cameroon</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://github.com/gedeontiga" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="www.linkedin.com/in/gedeon-tiga-9a32b3296"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Projects</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              I'm Software Engineer, Cloud Architect and Projects Manager from
+              Yaounde, Cameroun, working in web development, cloud computing and
+              DevOps. I enjoy turning complex problems into simple and i really
+              like topics related to data science.
+            </p>
+
+            <p>
+              I develop robust web applications by writing efficient, scalable
+              code and leveraging modern technologies. As a Cloud Architect, I
+              design secure, resilient infrastructures that optimize performance
+              and cost. I manage projects from conception to completion,
+              ensuring timely delivery and clear stakeholder communication. I
+              streamline development processes with DevOps best practices,
+              automation, and continuous integration. My work blends technical
+              innovation with strategic leadership to transform complex
+              challenges into simple, effective solutions.
+            </p>
+          </section>
+
+          <!--
+          - service
+        -->
+
+          <section class="service">
+            <h3 class="h3 service-title">What i'm doing</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/project-manager.png"
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Project Management</h4>
+
+                  <p class="service-item-text">
+                    Oversee project planning and execution using agile
+                    methodologies to ensure on-time delivery.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/web-dev-icon.png"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web development</h4>
+
+                  <p class="service-item-text">
+                    Build responsive, scalable and user-friendly web
+                    applications using modern frameworks and clean code
+                    practices.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/mobile-dev.png"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                  <p class="service-item-text">
+                    Design innovative mobile applications that deliver seamless
+                    functionality and engaging user interfaces.
+                    <!-- Leverage cross-platform development for efficient, feature-rich
+                    experiences. -->
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/koyeb-thumb.png"
+                    alt="camera icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Cloud solutions</h4>
+
+                  <p class="service-item-text">
+                    Architect secure, scalable cloud infrastructures tailored
+                    for business efficiency and cost optimization.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+          - Technologies
+        -->
+
+          <section class="technologies">
+            <h3 class="h3 technologies-title">Technologies used</h3>
+
+            <ul class="technologies-list has-scrollbar">
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/spring-framework-logo.svg"
+                      alt="Spring Framework Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    Spring Framework
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      The Spring Framework is a powerful, open-source framework
+                      for Java that simplifies enterprise application
+                      development. It supports dependency injection,
+                      aspect-oriented programming, and integrates well with
+                      databases, web services, and security. Spring Boot, an
+                      extension, enables rapid application development with
+                      minimal configuration, making Spring widely used for
+                      scalable, maintainable backend applications and
+                      microservices.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/angular-logo.png"
+                      alt="Angular Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    Angular
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      Angular is a TypeScript-based front-end web framework
+                      developed by Google. It enables the creation of dynamic,
+                      single-page applications (SPAs) using components,
+                      services, and dependency injection. Angular includes a
+                      powerful CLI, built-in routing, form validation, and RxJS
+                      for reactive programming. It's well-suited for large-scale
+                      enterprise applications with complex user interfaces and
+                      state management.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/django-logo.png"
+                      alt="Django Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    Django Framework
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      Django is a high-level Python web framework that promotes
+                      rapid development and clean, pragmatic design. It comes
+                      with an ORM, authentication system, admin interface, and
+                      follows the DRY (Don't Repeat Yourself) principle. Django
+                      is excellent for building secure, scalable,
+                      database-driven applications quickly and is used in many
+                      production-grade websites.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/react-brands-solid.png"
+                      alt="React Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    React Framework
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      ReactJS is a JavaScript library developed by Meta for
+                      building interactive user interfaces using components and
+                      a virtual DOM for fast updates. React Native extends this
+                      concept to mobile apps, allowing developers to write
+                      cross-platform native apps using JavaScript and React.
+                      Both emphasize modularity, reusability, and reactive data
+                      handling.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/flutter-logo.png"
+                      alt="Flutter Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    Flutter Framework
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      Flutter is an open-source UI toolkit from Google for
+                      building natively compiled applications for mobile, web,
+                      and desktop from a single Dart codebase. It provides a
+                      rich set of customizable widgets and fast performance
+                      thanks to its Skia rendering engine. Ideal for developers
+                      seeking expressive UI and consistent behavior across
+                      platforms.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/firebase-logo.png"
+                      alt="Firebase Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    Firebase
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      Firebase is a Backend-as-a-Service (BaaS) platform from
+                      Google offering tools like real-time databases, Firestore,
+                      authentication, cloud functions, and analytics. It
+                      accelerates development by eliminating backend management,
+                      especially for mobile and web apps. Firebase scales
+                      automatically and integrates well with Google Cloud,
+                      making it ideal for MVPs and real-time apps.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/supabase.png"
+                      alt="Supabase Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    Supabase
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      Supabase is an open-source alternative to Firebase, built
+                      on top of PostgreSQL. It offers instant APIs,
+                      authentication, real-time subscriptions, and storage.
+                      Developers can build full-stack applications quickly using
+                      SQL, while maintaining data integrity and control.
+                      Supabase allows self-hosting and is ideal for projects
+                      needing relational data with real-time features.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/mongodb.svg"
+                      alt="MongoDB Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    MongoDB
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      MongoDB is a NoSQL document database that stores data in
+                      flexible, JSON-like documents (BSON). It’s schema-less,
+                      scalable, and ideal for handling unstructured or evolving
+                      data. MongoDB supports horizontal scaling, aggregation
+                      pipelines, and geospatial queries, making it a popular
+                      choice for modern web apps, real-time analytics, and
+                      large-scale applications.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/sqlite-logo.png"
+                      alt="SQLite Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    SQLite
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      SQLite is a lightweight, serverless, self-contained
+                      relational database engine. It stores data in a single
+                      file, requires no configuration, and is widely used in
+                      mobile apps, embedded systems, and small-scale
+                      applications. Despite its simplicity, SQLite supports ACID
+                      transactions, making it reliable for local data storage in
+                      resource-constrained environments.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/postgresql-logo.png"
+                      alt="PostgreSQL Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    PostgreSQL
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      PostgreSQL is a powerful, open-source relational database
+                      known for standards compliance, extensibility, and
+                      advanced features like full-text search, JSONB, and custom
+                      data types. It supports ACID transactions, high
+                      concurrency, and complex queries. PostgreSQL is widely
+                      used for applications needing strong data integrity,
+                      scalability, and rich data modeling capabilities.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/mysql-logo.png"
+                      alt="MySQL Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    MySQL
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      MySQL is a popular, open-source relational database
+                      management system (RDBMS) known for speed, reliability,
+                      and ease of use. Backed by Oracle, it supports SQL, ACID
+                      compliance, and replication. MySQL is widely used in web
+                      development (e.g., LAMP stack) and offers excellent
+                      compatibility with many tools and hosting environments.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="technologies-item">
+                <div class="content-card" data-technologies-item>
+                  <figure class="technologies-avatar-box">
+                    <img
+                      src="./assets/images/docker-logo.png"
+                      alt="Docker Logo"
+                      width="60"
+                      data-technologies-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 technologies-item-title"
+                    data-technologies-title
+                  >
+                    Docker
+                  </h4>
+
+                  <div class="technologies-text" data-technologies-text>
+                    <p>
+                      Docker is a containerization platform that packages
+                      applications and their dependencies into isolated units
+                      called containers. These containers run consistently
+                      across different environments, solving the "it works on my
+                      machine" problem. Docker simplifies deployment, testing,
+                      and scaling of applications, and is widely used in CI/CD
+                      pipelines and microservices architectures.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+          - Technologies modal
+        -->
+
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
+
+            <section class="technologies-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/atg-logo.png"
+                    alt="Daniel lewis"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
+
+                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
+              </div>
+
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>ATG</h4>
+
+                <time datetime="2021-06-14">14 June, 2021</time>
+
+                <div data-modal-text>
+                  <p>
+                    I'm Software Engineer, Cloud Architect and Projects Manager
+                    from Yaounde, Cameroun, working in web development, cloud
+                    computing and DevOps. I enjoy turning complex problems into
+                    simple and i really like topics related to data science.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!--
+          - Programming Language
+        -->
+
+          <section class="clients">
+            <h3 class="h3 clients-title">Programming Language</h3>
+
+            <ul class="clients-list has-scrollbar">
+              <li class="clients-item">
+                <a href="https://docs.python.org/3/">
+                  <img
+                    src="./assets/images/python-brands-solid.png"
+                    alt="python logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="https://docs.oracle.com/en/java/">
+                  <img
+                    src="./assets/images/java-brands-solid.png"
+                    alt="java logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                >
+                  <img
+                    src="./assets/images/square-js-brands-solid.png"
+                    alt="javascript logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a
+                  href="https://learn.microsoft.com/fr-fr/cpp/cpp/?view=msvc-170"
+                >
+                  <img src="./assets/images/c-solid.png" alt="c++ logo" />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="https://dart.dev/docs">
+                  <img
+                    src="./assets/images/dart-lang-brands.png"
+                    alt="dart logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a
+                  href="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/"
+                >
+                  <img
+                    src="./assets/images/csharp-icon.png"
+                    alt="C-shap logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="https://developer.apple.com/documentation/swift">
+                  <img
+                    src="./assets/images/swift-brands-solid.png"
+                    alt="swift logo"
+                  />
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  University of Yaounde I - First Cycle
+                </h4>
+
+                <span>2021 — 2024</span>
+
+                <p class="timeline-text">
+                  I obtained my bachelor degree from university school of
+                  Yaounde I in computer science specialization in software
+                  engineering. I learned a lot about software development, cloud
+                  computing and DevOps.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  University of Yaounde I - Second Cycle
+                </h4>
+
+                <span>2024 — 2025</span>
+
+                <p class="timeline-text">
+                  I obtained a Master 1 in information systems and software
+                  engineering. During this year, I improved my skills in
+                  software development (specially on software architecture and
+                  design best practices), cloud computing and DevOps. I also
+                  learned fundamentals of data science and machine learning.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Web Developer intern at KIAMA
+                </h4>
+
+                <span
+                  >July 2023 — september 2023 and August 2024 - October
+                  2024</span
+                >
+
+                <p class="timeline-text">
+                  KIAMA is a company specializing in website design,
+                  implementation, and deployment. My contribution to this
+                  company was to conduct an analysis of a website's graphic
+                  charter.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="skill">
+            <h3 class="h3 skills-title">My skills</h3>
+
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Software designer</h5>
+                  <data value="90">90%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Mobile development</h5>
+                  <data value="90">90%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Software Architect</h5>
+                  <data value="80">80%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Programmer</h5>
+                  <data value="95">95%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 95%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">UI/UX design</h5>
+                  <data value="70">70%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+        <article class="portfolio" data-page="projects">
+          <header>
+            <h2 class="h2 article-title">Projects</h2>
+          </header>
+
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Web design</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Applications</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Web development</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Select category
+                </div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Web design</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Applications</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Web development</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-1.jpg"
+                      alt="finance"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Finance</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-2.png"
+                      alt="orizon"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Orizon</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-3.jpg"
+                      alt="fundo"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Fundo</h3>
+
+                  <p class="project-category">Web design</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-4.png"
+                      alt="brawlhalla"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Brawlhalla</h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-5.png"
+                      alt="dsm."
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">DSM.</h3>
+
+                  <p class="project-category">Web design</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-6.png"
+                      alt="metaspark"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">MetaSpark</h3>
+
+                  <p class="project-category">Web design</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-7.png"
+                      alt="summary"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Summary</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-8.jpg"
+                      alt="task manager"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Task Manager</h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-9.png"
+                      alt="arrival"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="project-content">
+                    <div class="project-meta">
+                      <p class="project-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 project-item-title">
+                      Design conferences in 2022
+                    </h3>
+
+                    <p class="project-text">
+                      Veritatis et quasi architecto beatae vitae dicta sunt,
+                      explicabo.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #CONTACT
+      -->
+
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15923.36109919692!2d11.500854612809798!3d3.8687798991218557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf9a221f7a29%3A0x8e83b8a4f91d9f45!2sYaounde%201%2C%20Yaound%C3%A9%2C%20Cameroon!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                width="400"
+                height="300"
+                loading="lazy"
+              ></iframe>
+            </figure>
+          </section>
+
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+
+            <form
+              action="https://formspree.io/f/gedeontigadev@gmail.com"
+              method="POST"
+              class="form"
+            >
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                />
+              </div>
+
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+              ></textarea>
+
+              <!-- The "disabled" attribute has been removed to make the button clickable -->
+              <button class="form-btn" type="submit">
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js">
+          window.addEventListener('load', function() {
+            document.querySelector('.page-loader').classList.add('hidden');
+          });
+      // Theme Toggle Functionality
+      const themeToggle = document.getElementById('themeToggle');
+      const moonIcon = document.getElementById('moonIcon');
+      const sunIcon = document.getElementById('sunIcon');
+      const html = document.documentElement;
+
+      // Check for saved theme preference or default to 'dark'
+      const currentTheme = localStorage.getItem('theme') || 'dark';
+      html.setAttribute('data-theme', currentTheme);
+
+      // Update icon based on current theme
+      if (currentTheme === 'light') {
+        moonIcon.classList.remove('active');
+        sunIcon.classList.add('active');
+      }
+
+      // Toggle theme
+      themeToggle.addEventListener('click', function() {
+        const theme = html.getAttribute('data-theme');
+        const newTheme = theme === 'dark' ? 'light' : 'dark';
+
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+
+        // Toggle icons
+        moonIcon.classList.toggle('active');
+        sunIcon.classList.toggle('active');
+      });
+
+      // Hide loader when page is fully loaded
+      window.addEventListener('load', function() {
+        const loader = document.querySelector('.page-loader');
+        if (loader) {
+          loader.classList.add('hidden');
+        }
+      });
+
+      // Backup: Hide loader after 3 seconds
+      setTimeout(function() {
+        const loader = document.querySelector('.page-loader');
+        if (loader) {
+          loader.classList.add('hidden');
+        }
+      }, 3000);
+
+          // Hide loader when page is fully loaded
+          window.addEventListener('load', function() {
+            const loader = document.querySelector('.page-loader');
+            if (loader) {
+              loader.classList.add('hidden');
+            }
+          });
+
+          // Backup: Hide loader after 3 seconds
+          setTimeout(function() {
+            const loader = document.querySelector('.page-loader');
+            if (loader) {
+              loader.classList.add('hidden');
+            }
+          }, 3000);
+    </script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
