@@ -23,6 +23,46 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const themeToggle = document.getElementById("themeToggle");
+        const moonIcon = document.getElementById("moonIcon");
+        const sunIcon = document.getElementById("sunIcon");
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to 'dark'
+        const currentTheme = localStorage.getItem("theme") || "dark";
+        html.setAttribute("data-theme", currentTheme);
+
+        // Update icon based on current theme
+        if (currentTheme === "light") {
+          moonIcon.classList.remove("active");
+          sunIcon.classList.add("active");
+        }
+
+        // Toggle theme
+        themeToggle.addEventListener("click", function () {
+          const theme = html.getAttribute("data-theme");
+          const newTheme = theme === "dark" ? "light" : "dark";
+
+          html.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+
+          // Toggle icons
+          moonIcon.classList.toggle("active");
+          sunIcon.classList.toggle("active");
+        });
+      });
+    </script>
 
     <!--
     - google font link
@@ -71,7 +111,7 @@
           <div class="info-content">
             <h1 class="name" title="Richard hanrick">Ambomo Tiga Gédéon</h1>
 
-            <p class="title">Software engineer</p>
+            <p class="title">Software & DevOps engineer</p>
           </div>
 
           <button class="info_more-btn" data-sidebar-btn>
@@ -103,20 +143,6 @@
 
             <li class="contact-item">
               <div class="icon-box">
-                <i class="fab fa-whatsapp"></i>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Phone</p>
-
-                <a href="https://wa.me/1237691657998" class="contact-link"
-                  >+237 691-65-79-98</a
-                >
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
                 <ion-icon name="location-outline"></ion-icon>
               </div>
 
@@ -138,6 +164,12 @@
             </li>
 
             <li class="social-item">
+              <a href="https://wa.me/1237691657998" class="contact-link"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </li>
+
+            <li class="social-item">
               <a
                 href="www.linkedin.com/in/gedeon-tiga-9a32b3296"
                 class="social-link"
@@ -146,6 +178,10 @@
               </a>
             </li>
           </ul>
+          <a href="./assets/My_CV.pdf" class="form-btn cv-btn" download>
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download CV</span>
+          </a>
         </div>
       </aside>
 
@@ -189,22 +225,23 @@
 
           <section class="about-text">
             <p>
-              I'm Software Engineer, Cloud Architect and Projects Manager from
-              Yaounde, Cameroun, working in web development, cloud computing and
-              DevOps. I enjoy turning complex problems into simple and i really
-              like topics related to data science.
+              I'm Software and DevOps engineer from Yaounde, Cameroun, working
+              as a freelancer. I enjoy turning complex problems into simple and
+              i really like topics related to data science.
             </p>
 
             <p>
               I develop robust web applications by writing efficient, scalable
-              code and leveraging modern technologies. As a Cloud Architect, I
-              design secure, resilient infrastructures that optimize performance
-              and cost. I manage projects from conception to completion,
-              ensuring timely delivery and clear stakeholder communication. I
-              streamline development processes with DevOps best practices,
-              automation, and continuous integration. My work blends technical
-              innovation with strategic leadership to transform complex
-              challenges into simple, effective solutions.
+              code and leveraging modern technologies. As a DevOps engineer, I
+              implement best practices that streamline the software lifecycle,
+              from development to deployment. I design and maintain CI/CD
+              pipelines, automate workflows, and integrate monitoring tools to
+              ensure reliability and high availability. I emphasize
+              collaboration between development and operations, applying
+              infrastructure as code, version control, and automated testing to
+              deliver faster, more secure releases. My work focuses on creating
+              efficient, resilient systems where innovation is backed by
+              consistency and continuous improvement.
             </p>
           </section>
 
@@ -268,10 +305,9 @@
                   <h4 class="h4 service-item-title">Mobile apps</h4>
 
                   <p class="service-item-text">
-                    Design innovative mobile applications that deliver seamless
-                    functionality and engaging user interfaces.
-                    <!-- Leverage cross-platform development for efficient, feature-rich
-                    experiences. -->
+                    Design innovative cross-platform mobile (first) applications
+                    that deliver seamless functionality and engaging user
+                    interfaces. experiences.
                   </p>
                 </div>
               </li>
@@ -286,11 +322,11 @@
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Cloud solutions</h4>
+                  <h4 class="h4 service-item-title">DevOps</h4>
 
                   <p class="service-item-text">
-                    Architect secure, scalable cloud infrastructures tailored
-                    for business efficiency and cost optimization.
+                    Enhance reliability and speed by applying CI/CD,
+                    infrastructure as code, and continuous monitoring.
                   </p>
                 </div>
               </li>
@@ -972,15 +1008,15 @@
               </li>
 
               <li class="filter-item">
-                <button data-filter-btn>Web design</button>
+                <button data-filter-btn>Web</button>
               </li>
 
               <li class="filter-item">
-                <button data-filter-btn>Applications</button>
+                <button data-filter-btn>Mobile</button>
               </li>
 
               <li class="filter-item">
-                <button data-filter-btn>Web development</button>
+                <button data-filter-btn>Desktop</button>
               </li>
             </ul>
 
@@ -1001,15 +1037,15 @@
                 </li>
 
                 <li class="select-item">
-                  <button data-select-item>Web design</button>
+                  <button data-select-item>Web</button>
                 </li>
 
                 <li class="select-item">
-                  <button data-select-item>Applications</button>
+                  <button data-select-item>Mobile</button>
                 </li>
 
                 <li class="select-item">
-                  <button data-select-item>Web development</button>
+                  <button data-select-item>Desktop</button>
                 </li>
               </ul>
             </div>
@@ -1020,7 +1056,7 @@
                 data-filter-item
                 data-category="web development"
               >
-                <a href="#">
+                <a href="https://github.com/gedeontiga/Studor_backend">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
@@ -1028,12 +1064,12 @@
 
                     <img
                       src="./assets/images/project-1.jpg"
-                      alt="finance"
+                      alt="studor"
                       loading="lazy"
                     />
                   </figure>
 
-                  <h3 class="project-title">Finance</h3>
+                  <h3 class="project-title">StudOr</h3>
 
                   <p class="project-category">Web development</p>
                 </a>
@@ -1044,7 +1080,7 @@
                 data-filter-item
                 data-category="web development"
               >
-                <a href="#">
+                <a href="https://github.com/gedeontiga">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
@@ -1052,14 +1088,14 @@
 
                     <img
                       src="./assets/images/project-2.png"
-                      alt="orizon"
+                      alt="Schedule Management"
                       loading="lazy"
                     />
                   </figure>
 
-                  <h3 class="project-title">Orizon</h3>
+                  <h3 class="project-title">Schedule Management</h3>
 
-                  <p class="project-category">Web development</p>
+                  <p class="project-category">Mobile</p>
                 </a>
               </li>
 
@@ -1068,7 +1104,7 @@
                 data-filter-item
                 data-category="web design"
               >
-                <a href="#">
+                <a href="https://github.com/gedeontiga">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
@@ -1076,14 +1112,14 @@
 
                     <img
                       src="./assets/images/project-3.jpg"
-                      alt="fundo"
+                      alt="Squares Conquest"
                       loading="lazy"
                     />
                   </figure>
 
-                  <h3 class="project-title">Fundo</h3>
+                  <h3 class="project-title">Squares Conquest</h3>
 
-                  <p class="project-category">Web design</p>
+                  <p class="project-category">Mobile</p>
                 </a>
               </li>
 
@@ -1092,7 +1128,7 @@
                 data-filter-item
                 data-category="applications"
               >
-                <a href="#">
+                <a href="https://github.com/gedeontiga">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
@@ -1100,14 +1136,14 @@
 
                     <img
                       src="./assets/images/project-4.png"
-                      alt="brawlhalla"
+                      alt="Food App"
                       loading="lazy"
                     />
                   </figure>
 
-                  <h3 class="project-title">Brawlhalla</h3>
+                  <h3 class="project-title">Food App</h3>
 
-                  <p class="project-category">Applications</p>
+                  <p class="project-category">Mobile</p>
                 </a>
               </li>
 
@@ -1116,7 +1152,7 @@
                 data-filter-item
                 data-category="web design"
               >
-                <a href="#">
+                <a href="https://github.com/gedeontiga">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
@@ -1124,14 +1160,14 @@
 
                     <img
                       src="./assets/images/project-5.png"
-                      alt="dsm."
+                      alt="AHP App"
                       loading="lazy"
                     />
                   </figure>
 
-                  <h3 class="project-title">DSM.</h3>
+                  <h3 class="project-title">AHP App</h3>
 
-                  <p class="project-category">Web design</p>
+                  <p class="project-category">Desktop</p>
                 </a>
               </li>
 
@@ -1140,7 +1176,7 @@
                 data-filter-item
                 data-category="web design"
               >
-                <a href="#">
+                <a href="https://github.com/gedeontiga">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
@@ -1148,12 +1184,12 @@
 
                     <img
                       src="./assets/images/project-6.png"
-                      alt="metaspark"
+                      alt="Time Series App"
                       loading="lazy"
                     />
                   </figure>
 
-                  <h3 class="project-title">MetaSpark</h3>
+                  <h3 class="project-title">Time Series App</h3>
 
                   <p class="project-category">Web design</p>
                 </a>
@@ -1164,7 +1200,7 @@
                 data-filter-item
                 data-category="web development"
               >
-                <a href="#">
+                <a href="https://github.com/gedeontiga">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
@@ -1188,7 +1224,7 @@
                 data-filter-item
                 data-category="applications"
               >
-                <a href="#">
+                <a href="https://github.com/gedeontiga">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
@@ -1212,7 +1248,7 @@
                 data-filter-item
                 data-category="web development"
               >
-                <a href="#">
+                <a href="https://github.com/gedeontiga">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
@@ -1320,34 +1356,6 @@
           window.addEventListener('load', function() {
             document.querySelector('.page-loader').classList.add('hidden');
           });
-      // Theme Toggle Functionality
-      const themeToggle = document.getElementById('themeToggle');
-      const moonIcon = document.getElementById('moonIcon');
-      const sunIcon = document.getElementById('sunIcon');
-      const html = document.documentElement;
-
-      // Check for saved theme preference or default to 'dark'
-      const currentTheme = localStorage.getItem('theme') || 'dark';
-      html.setAttribute('data-theme', currentTheme);
-
-      // Update icon based on current theme
-      if (currentTheme === 'light') {
-        moonIcon.classList.remove('active');
-        sunIcon.classList.add('active');
-      }
-
-      // Toggle theme
-      themeToggle.addEventListener('click', function() {
-        const theme = html.getAttribute('data-theme');
-        const newTheme = theme === 'dark' ? 'light' : 'dark';
-
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-
-        // Toggle icons
-        moonIcon.classList.toggle('active');
-        sunIcon.classList.toggle('active');
-      });
 
       // Hide loader when page is fully loaded
       window.addEventListener('load', function() {
@@ -1381,17 +1389,5 @@
             }
           }, 3000);
     </script>
-
-    <!--
-    - ionicon link
-  -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

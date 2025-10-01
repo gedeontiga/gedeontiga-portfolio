@@ -68,7 +68,7 @@
    * typography
    */
   /* font-family */
-  --ff-franklin: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  --ff-franklin: "Times New Roman", Times, serif;
 
   /* font-size */
   --fs-1: 24px;
@@ -102,54 +102,77 @@
   --transition-2: 0.5s ease-in-out;
 }
 
-/* Light Theme */
 [data-theme="light"] {
-  /* gradient */
+  /**  * Page and Card Backgrounds - Soft, Modern Palette  * Warm off-white background with crisp white cards for depth  */
+  --smoky-black: hsl(210, 20%, 97%);
+  --eerie-black-1: hsl(0, 0%, 100%);
+  --eerie-black-2: hsl(0, 0%, 99%);
+  /**  * Text Colors - Softer & More Comfortable  * Reduced contrast for easier reading  */
+  --white-1: hsl(220, 15%, 35%);
+  --white-2: hsl(220, 12%, 40%);
+  --light-gray: hsl(220, 10%, 55%);
+  --light-gray-70: hsla(220, 10%, 55%, 0.75);
+  /**  * Accent Colors - Vibrant & Modern  */
+  --blue-green: hsl(155, 65%, 45%);
+  --primary-color: #3b82f6;
+  --secondary-color: #10b981;
+  --accent-color: #f59e0b;
+  --hover-color: #ef4444;
+  /**  * Borders and Gradients - Refined & Subtle  */
+  --jet: hsl(220, 15%, 92%);
+  --onyx: hsl(220, 20%, 96%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(220, 15%, 90%) 0%,
+    hsla(220, 15%, 90%, 0) 50%
+  );
   --bg-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(0, 0%, 95%) 3%,
-    hsl(0, 0%, 90%) 97%
+    hsl(210, 25%, 98%) 3%,
+    hsl(220, 20%, 95%) 97%
   );
   --bg-gradient-jet: linear-gradient(
       to bottom right,
-      hsla(0, 0%, 98%, 0.8) 0%,
-      hsla(0, 0%, 95%, 0) 100%
+      hsla(220, 25%, 100%, 0.9) 0%,
+      hsla(220, 20%, 98%, 0) 100%
     ),
-    hsl(0, 0%, 96%);
+    hsl(0, 0%, 99%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right,
-    hsl(45, 100%, 71%) 0%,
-    hsla(36, 100%, 69%, 0) 50%
+    hsl(45, 95%, 65%) 0%,
+    hsla(36, 95%, 65%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
       135deg,
-      hsla(45, 100%, 71%, 0.4) 0%,
-      hsla(35, 100%, 68%, 0) 59.86%
+      hsla(45, 95%, 70%, 0.35) 0%,
+      hsla(35, 95%, 68%, 0) 59.86%
     ),
-    hsl(0, 0%, 96%);
-  --border-gradient-onyx: linear-gradient(
-    to bottom right,
-    hsl(0, 0%, 85%) 0%,
-    hsla(0, 0%, 85%, 0) 50%
-  );
+    hsl(220, 20%, 98%);
+  --text-gradient-blue: linear-gradient(to right, #3b82f6, #10b981);
+  /**  * Shadows - Elegant & Layered  */
+  --shadow-1: 0 2px 8px hsla(220, 15%, 20%, 0.08);
+  --shadow-2: 0 4px 16px hsla(220, 15%, 20%, 0.1);
+  --shadow-3: 0 8px 24px hsla(220, 15%, 20%, 0.12);
+  --shadow-4: 0 12px 32px hsla(220, 15%, 20%, 0.14);
+  --shadow-5: 0 16px 40px hsla(220, 15%, 20%, 0.16);
+}
 
-  /* solid */
-  --jet: hsl(0, 0%, 85%);
-  --onyx: hsl(0, 0%, 92%);
-  --eerie-black-1: hsl(0, 0%, 96%);
-  --eerie-black-2: hsl(0, 0%, 98%);
-  --smoky-black: hsl(0, 0%, 100%);
-  --white-1: hsl(0, 0%, 10%);
-  --white-2: hsl(0, 0%, 15%);
-  --light-gray: hsl(0, 0%, 30%);
-  --light-gray-70: hsla(0, 0%, 30%, 0.7);
+.cv-btn {
+  margin-top: 15px; /* Adds some space above the button */
+  width: 100%;
+  justify-content: center;
+}
 
-  /* shadow */
-  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.08);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.08);
-  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.08);
-  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.06);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.1);
+.cv-btn ion-icon {
+  font-size: 18px; /* Matches the contact form button icon */
+}
+
+/* Make it look good on larger screens */
+@media (min-width: 1250px) {
+  .cv-btn {
+    margin: 25px auto; /* Center it nicely in the sidebar */
+    width: 80%;
+  }
 }
 
 /*-----------------------------------*\ #RESET
@@ -219,6 +242,7 @@ html {
 
 body {
   background: var(--smoky-black);
+  /* font-family: "Times New Roman", Times, serif; */
 }
 
 /*-----------------------------------*\
@@ -660,7 +684,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--smoky-black);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -747,7 +771,7 @@ main {
 
 /* Enhanced About Section */
 .about-text p {
-  animation: fadeIn var(--transition-medium);
+  animation: fadeIn var(--transition-slow) forwards;
   animation-fill-mode: both;
 }
 
@@ -903,6 +927,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  text-align: justify;
 }
 
 .about-text p {
