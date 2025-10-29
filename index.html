@@ -1334,13 +1334,26 @@
       </div>
     </main>
 
+    <div class="copyright-content">
+        <p class="copyright-text">
+            <strong>© <small class="year-update">2025</small> Ambomo Tiga Gédéon. All rights reserved.</strong><br>
+            This portfolio and its contents are protected by copyright law.
+        </p>
+    </div>
+
     <!--
     - custom js link
   -->
     <script src="./assets/js/script.js">
-          window.addEventListener('load', function() {
-            document.querySelector('.page-loader').classList.add('hidden');
-          });
+      window.addEventListener('load', function() {
+        document.querySelector('.page-loader').classList.add('hidden');
+      });
+      // Auto-update copyright year
+      const yearElement = document.querySelector('.year-update');
+      if (yearElement) {
+          const currentYear = new Date().getFullYear();
+          yearElement.textContent = `${currentYear}`;
+      }
 
       // Hide loader when page is fully loaded
       window.addEventListener('load', function() {

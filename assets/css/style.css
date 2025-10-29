@@ -1,17 +1,5 @@
-/*-----------------------------------*\ #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-/*-----------------------------------*\ #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
-  /**
-   * colors
-   */
+  /* Colors */
   --primary-color: #4c8cf4;
   --secondary-color: #34a853;
   --accent-color: #fbbc05;
@@ -20,7 +8,7 @@
   --transition-medium: 0.5s ease;
   --transition-slow: 0.8s ease;
 
-  /* gradient */
+  /* Gradient */
   --bg-gradient-onyx: linear-gradient(
     to bottom right,
     hsl(240, 1%, 25%) 3%,
@@ -51,7 +39,7 @@
   --text-gradient-blue: linear-gradient(to top, #4285f4, #34a853);
   --text-gradient-accent: linear-gradient(to top, #34a853, #fbbc05);
 
-  /* solid */
+  /* Solid */
   --jet: hsl(0, 0%, 22%);
   --jet-accent: hsla(45, 100%, 66%, 0.5);
   --onyx: hsl(240, 1%, 17%);
@@ -66,13 +54,8 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
-  /**
-   * typography
-   */
-  /* font-family */
+  /* Typography */
   --ff-franklin: "Times New Roman", Times, serif;
-
-  /* font-size */
   --fs-1: 24px;
   --fs-2: 18px;
   --fs-3: 17px;
@@ -81,82 +64,110 @@
   --fs-6: 14px;
   --fs-7: 13px;
   --fs-8: 11px;
-
-  /* font-weight */
   --fw-300: 300;
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
 
-  /**
-   * shadow
-   */
+  /* Shadow */
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
   --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
   --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
 
-  /**
-   * transition
-   */
+  /* Transition */
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
 }
 
 [data-theme="light"] {
-  /**  * Page and Card Backgrounds - Softer, Eye-Friendly Palette  */
-  --smoky-black: hsl(210, 15%, 94%);
-  --eerie-black-1: hsl(210, 20%, 98%);
-  --eerie-black-2: hsl(210, 18%, 97%);
-  /**  * Text Colors - Comfortable Contrast  */
-  --white-1: hsl(220, 12%, 28%);
-  --white-2: hsl(220, 10%, 45%);
-  --light-gray: hsl(220, 8%, 60%);
-  --light-gray-70: hsla(220, 8%, 60%, 0.7);
-  /**  * Accent Colors - Muted & Harmonious  */
-  --blue-green: hsl(155, 55%, 42%);
-  --primary-color: #5b8def;
-  --secondary-color: #2ba378;
-  --accent-color: #e89a3c;
-  --hover-color: #dc5e5e;
-  /**  * Borders and Gradients - Subtle & Refined  */
-  --jet: hsl(220, 12%, 88%);
-  --onyx: hsl(220, 15%, 93%);
+  /* Clean, High-Contrast Light Theme */
+
+  /* Backgrounds - Neutral and easy on eyes */
+  --smoky-black: hsl(0, 0%, 98%);
+  --eerie-black-1: hsl(0, 0%, 100%);
+  --eerie-black-2: hsl(0, 0%, 99%);
+
+  /* Text - Strong contrast for readability (WCAG AAA) */
+  --white-1: hsl(0, 0%, 13%);
+  --white-2: hsl(0, 0%, 25%);
+  --light-gray: hsl(0, 0%, 45%);
+  --light-gray-70: hsla(0, 0%, 45%, 0.75);
+
+  /* Accent Colors - Vibrant but professional */
+  --blue-green: hsl(155, 65%, 35%);
+  --primary-color: #1a73e8;
+  --secondary-color: #1e8e5e;
+  --accent-color: #f59e0b;
+  --hover-color: #dc2626;
+
+  /* Surfaces */
+  --jet: hsl(0, 0%, 95%);
+  --onyx: hsl(0, 0%, 97%);
+
+  /* Gradients - Subtle and clean */
   --border-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(220, 12%, 85%) 0%,
-    hsla(220, 12%, 85%, 0) 50%
+    hsl(0, 0%, 88%) 0%,
+    hsla(0, 0%, 88%, 0) 50%
   );
   --bg-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(210, 18%, 96%) 3%,
-    hsl(220, 15%, 94%) 97%
+    hsl(0, 0%, 99%) 3%,
+    hsl(0, 0%, 97%) 97%
   );
   --bg-gradient-jet: linear-gradient(
       to bottom right,
-      hsla(220, 20%, 99%, 0.7) 0%,
-      hsla(220, 18%, 97%, 0) 100%
+      hsla(0, 0%, 98%, 0.9) 0%,
+      hsla(0, 0%, 97%, 0) 100%
     ),
-    hsl(210, 18%, 97%);
+    hsl(0, 0%, 98%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right,
-    hsl(45, 75%, 68%) 0%,
-    hsla(36, 75%, 68%, 0) 50%
+    hsl(45, 90%, 60%) 0%,
+    hsla(36, 90%, 60%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
       135deg,
-      hsla(45, 75%, 72%, 0.25) 0%,
-      hsla(35, 75%, 70%, 0) 59.86%
+      hsla(45, 90%, 65%, 0.15) 0%,
+      hsla(35, 90%, 63%, 0) 59.86%
     ),
-    hsl(220, 15%, 96%);
-  --text-gradient-blue: linear-gradient(to right, #5b8def, #2ba378);
-  /**  * Shadows - Soft & Natural  */
-  --shadow-1: 0 2px 8px hsla(220, 12%, 25%, 0.06);
-  --shadow-2: 0 4px 16px hsla(220, 12%, 25%, 0.08);
-  --shadow-3: 0 8px 24px hsla(220, 12%, 25%, 0.09);
-  --shadow-4: 0 12px 32px hsla(220, 12%, 25%, 0.1);
-  --shadow-5: 0 16px 40px hsla(220, 12%, 25%, 0.11);
+    hsl(0, 0%, 98%);
+  --text-gradient-blue: linear-gradient(to right, #1a73e8, #1e8e5e);
+  --text-gradient-accent: linear-gradient(to right, #1e8e5e, #f59e0b);
+
+  /* Shadows - Natural and crisp */
+  --shadow-1: 0 1px 3px hsla(0, 0%, 0%, 0.08);
+  --shadow-2: 0 2px 8px hsla(0, 0%, 0%, 0.1);
+  --shadow-3: 0 4px 16px hsla(0, 0%, 0%, 0.12);
+  --shadow-4: 0 8px 24px hsla(0, 0%, 0%, 0.14);
+  --shadow-5: 0 12px 32px hsla(0, 0%, 0%, 0.16);
+}
+
+.copyright-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -2rem;
+}
+
+.copyright-text {
+  text-align: center;
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  /* line-height: 1.8; */
+  margin-bottom: 5rem;
+}
+
+.copyright-text strong {
+  color: var(--white-1);
+  font-weight: var(--fw-500);
+}
+
+.year-update {
+  color: var(--secondary-color);
+  font-weight: var(--fw-500);
 }
 
 .cv-btn {
@@ -1020,11 +1031,13 @@ main {
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
+  /* background-color: transparent; */
 }
 
 .technologies-item {
   min-width: 100%;
   scroll-snap-align: center;
+  /* background-color: transparent; */
 }
 
 .technologies-avatar-box {
